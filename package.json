@@ -1,0 +1,111 @@
+{
+  "name": "mybatis-sql-highlight",
+  "displayName": "MyBatis SQL Highlight",
+  "description": "SQL syntax highlighting for MyBatis XML mappers, including CDATA, dynamic tags, parameters, and comments.",
+  "version": "0.8.0",
+  "publisher": "monkie",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:xml",
+    "onLanguage:plaintext",
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "MyBatis SQL Highlight",
+      "properties": {
+        "mybatisSqlHighlight.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable SQL keyword highlighting in MyBatis Mapper XML."
+        },
+        "mybatisSqlHighlight.keywordColor": {
+          "type": "string",
+          "default": "#569CD6",
+          "description": "SQL keyword foreground color (CSS color)."
+        },
+        "mybatisSqlHighlight.functionColor": {
+          "type": "string",
+          "default": "#DCDCAA",
+          "description": "SQL function foreground color (CSS color)."
+        },
+        "mybatisSqlHighlight.maxFileSizeKB": {
+          "type": "number",
+          "default": 2048,
+          "minimum": 1,
+          "description": "Skip highlighting files larger than this limit."
+        },
+        "mybatisSqlHighlight.statementTagColor": {
+          "type": "string",
+          "default": "#B8A1E3",
+          "description": "Color of select/insert/update/delete/sql tags."
+        },
+        "mybatisSqlHighlight.controlTagColor": {
+          "type": "string",
+          "default": "#F4B860",
+          "description": "Color of MyBatis dynamic control tags."
+        },
+        "mybatisSqlHighlight.commentColor": {
+          "type": "string",
+          "default": "#73AD80",
+          "description": "Color of XML comments including delimiters."
+        },
+        "mybatisSqlHighlight.numberColor": {
+          "type": "string",
+          "default": "#B5CEA8",
+          "description": "SQL numeric literal foreground color."
+        },
+        "mybatisSqlHighlight.stringColor": {
+          "type": "string",
+          "default": "#CE9178",
+          "description": "SQL string literal foreground color."
+        },
+        "mybatisSqlHighlight.sqlCommentColor": {
+          "type": "string",
+          "default": "#6A9955",
+          "description": "SQL -- and /* */ comment color."
+        },
+        "mybatisSqlHighlight.identifierColor": {
+          "type": "string",
+          "default": "#D4D4D4",
+          "description": "SQL identifiers (columns, aliases and tables) color. Default suits dark themes."
+        },
+        "mybatisSqlHighlight.parameterColor": {
+          "type": "string",
+          "default": "#9CDCFE",
+          "description": "MyBatis #{...} and ${...} parameter foreground color, including inside CDATA."
+        },
+        "mybatisSqlHighlight.operatorColor": {
+          "type": "string",
+          "default": "#D4D4D4",
+          "description": "SQL operators and punctuation foreground color, including inside CDATA."
+        }
+      }
+    }
+  },
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/git-monkie/mybatis-sql-highlight.git"
+  },
+  "homepage": "https://github.com/git-monkie/mybatis-sql-highlight#readme",
+  "bugs": {
+    "url": "https://github.com/git-monkie/mybatis-sql-highlight/issues"
+  },
+  "keywords": [
+    "mybatis",
+    "sql",
+    "xml",
+    "mapper",
+    "oracle",
+    "syntax highlighting",
+    "cdata"
+  ]
+}
